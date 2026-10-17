@@ -347,3 +347,4 @@ a:hover .more svg,.more:hover svg{transform:translateX(3px)}
   .visit__card{padding:26px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.rwidget { margin-top: 32px; }
