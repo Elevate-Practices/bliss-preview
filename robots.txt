@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://blissmoderndentistry.com/sitemap.xml
+Disallow: /
