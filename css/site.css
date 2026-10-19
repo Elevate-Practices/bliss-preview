@@ -81,7 +81,7 @@ a:hover .more svg,.more:hover svg{transform:translateX(3px)}
 .hdr__in{max-width:1320px;margin:0 auto;padding:0 24px;height:var(--hdr);display:flex;align-items:center;gap:28px}
 .hdr__logo img{height:60px;width:auto;margin-left:-8px}
 .nav{display:flex;align-items:center;gap:26px;margin-left:auto}
-.nav>a,.nav__btn{font:500 16px/1 var(--f);color:var(--ink);text-decoration:none;background:none;border:0;padding:10px 0;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+.nav>a,.nav__btn{font:500 18px/1 var(--f);color:var(--ink);text-decoration:none;background:none;border:0;padding:10px 0;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
 .nav__btn svg{width:16px;height:16px}
 .nav>a:hover,.nav__btn:hover{color:var(--blue)}
 .nav>a[aria-current]{color:var(--blue)}
@@ -93,13 +93,13 @@ a:hover .more svg,.more:hover svg{transform:translateX(3px)}
 .mega__h{margin:0 0 10px;font-weight:600}
 .mega__h a{color:var(--ink);text-decoration:none}
 .mega ul{list-style:none;margin:0;padding:0}
-.mega li a{display:block;padding:6px 0;color:var(--ink2);text-decoration:none;font-size:15px}
+.mega li a{display:block;padding:6px 0;color:var(--ink2);text-decoration:none;font-size:16px}
 .mega li a:hover{color:var(--blue)}
 .mega__all{grid-column:1/-1;border-top:1px solid var(--line);padding-top:16px}
 .mega__all a{font-weight:600;text-decoration:none;display:inline-flex;gap:6px;align-items:center}
 .mega__all svg{width:16px;height:16px}
 .hdr__cta{display:flex;align-items:center;gap:18px}
-.lang{font:500 15px/1 var(--f);color:var(--ink2);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.lang{font:500 17px/1 var(--f);color:var(--ink2);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
 .lang:hover{color:var(--blue)}
 .hdr__tel{display:inline-flex;align-items:center;gap:7px;font:600 16px/1 var(--f);color:var(--ink);text-decoration:none;min-height:44px}
 .hdr__tel svg{width:18px;height:18px;color:var(--blue)}
@@ -136,12 +136,12 @@ a:hover .more svg,.more:hover svg{transform:translateX(3px)}
 .hero .btns{margin-top:30px}
 
 /* facts strip */
-.facts{background:var(--black);color:#fff;border-top:1px solid rgba(255,255,255,.08)}
+.facts{background:#DFBE67;color:var(--black)}
 .facts__in{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:34px;padding-bottom:40px}
 .fact b{display:block;font-size:24px;font-weight:600;letter-spacing:-.01em}
-.fact span{display:block;color:#B9C3E6;font-size:15px;margin-top:4px}
-.fact a{color:#B9C3E6}
-.fact a:hover{color:#fff}
+.fact span{display:block;color:var(--black);font-size:15px;font-weight:500;margin-top:4px}
+.fact a{color:var(--black);font-weight:600}
+.fact a:hover{color:#06124A}
 
 /* page head */
 .head{padding:72px 0 0;background:#fff}
@@ -379,13 +379,21 @@ span.zoom{display:block;position:relative;isolation:isolate}
   .hero__pause{top:12px;right:12px}
 }
 
-/* gold plan cards: navy ink on gold (AA), one solid navy Choose button on every card */
-.plan .ticks--light li{color:var(--black);font-weight:500}
-.plan .ticks--light svg{color:var(--black)}
-.plan .fine--light{color:#1B2A6B}
-.plan .btn--book,.plan .btn--light{background:var(--black);color:#fff}
-.plan .btn--book:hover,.plan .btn--light:hover{background:#06124A;color:#fff}
-.member .plans+.fine--light{color:#DCE3FA}
+/* plan cards: navy with white text, logo-gold accents (price, checks, top edge, Choose button) */
+.plan{background:#142B80;color:#fff;border-top:5px solid #F3E6BA}
+.plan--hi{background:#1A38A0;border-top-color:#DFBE67;box-shadow:0 0 0 2px #DFBE67}
+.plans>.plan:last-child{background:#142B80;border-top-color:#C9A24A}
+.plan__n,.plan__s{color:#fff}
+.plan__p{color:#F3E6BA}
+.plan--hi .plan__p{color:#DFBE67}
+.plans>.plan:last-child .plan__p{color:#E3C066}
+.plan__p span{color:#fff;font-weight:500}
+.plan .ticks--light li{color:#fff;font-weight:400}
+.plan .ticks--light svg{color:#DFBE67}
+.plan .fine--light{color:#fff;opacity:.9}
+.plan .btn--book,.plan .btn--light{background:#DFBE67;color:var(--black)}
+.plan .btn--book:hover,.plan .btn--light:hover{background:#F3E6BA;color:var(--black)}
+.member .plans+.fine--light{color:#fff;opacity:.85}
 /* contact: heading on top, then two even cards starting on the same line */
 #request .h2{margin-bottom:36px}
 .split--cards{align-items:stretch;gap:32px}
