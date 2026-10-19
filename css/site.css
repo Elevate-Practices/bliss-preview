@@ -146,9 +146,13 @@ a:hover .more svg,.more:hover svg{transform:translateX(3px)}
 /* page head */
 .head{padding:72px 0 0;background:#fff}
 .head .in>.lede{margin-bottom:0}
-.head__media{margin-top:56px}
-.head__img{width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:var(--r)}
+.head__grid{display:grid;grid-template-columns:1fr;gap:56px;align-items:center}
+.head--split .head__grid{grid-template-columns:1fr 1fr;gap:64px}
+.head--split{padding-bottom:64px}
+.head--split .h1{text-wrap:balance}
+.head__img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
 .head+.sec{padding-top:96px}
+.head--split+.sec{padding-top:32px}
 .head:not(:has(.head__media)){padding-bottom:72px}
 .crumbs{padding-top:22px}
 .crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;font-size:14px;color:var(--mute)}
@@ -209,18 +213,19 @@ a:hover .more svg,.more:hover svg{transform:translateX(3px)}
 .sec--white .step__n{background:var(--gray)}
 .step p{margin:4px 0 0;color:var(--ink2)}
 .round{width:100%;border-radius:var(--r);object-fit:cover}
-.split__media .round{aspect-ratio:4/5}
+.split__media .round{aspect-ratio:4/3;object-position:50% 30%}
 
 /* membership */
 .member{background:var(--black);color:#fff;padding:120px 0}
 .member--page{padding:72px 0 96px}
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.plan{padding:34px;border-radius:var(--r);background:var(--black2)}
-.plan--hi{background:#1133AB}
+.plan{padding:34px;border-radius:var(--r);background:#F3E6BA;color:var(--black)}
+.plan--hi{background:#DFBE67}
+.plans>.plan:last-child{background:#C9A24A}
 .plan__n{margin:0;font-size:20px;font-weight:600}
-.plan__s{margin:4px 0 0;color:#B9C3E6;font-size:15px}
+.plan__s{margin:4px 0 0;color:var(--black);font-size:16px;font-weight:500}
 .plan__p{margin:18px 0 0;font-size:56px;font-weight:600;letter-spacing:-.03em;line-height:1}
-.plan__p span{font-size:17px;font-weight:500;color:#B9C3E6;letter-spacing:0;margin-left:4px}
+.plan__p span{font-size:17px;font-weight:600;color:var(--black);letter-spacing:0;margin-left:4px}
 .plan--full .plan__p{margin:20px 0 24px}
 .plan--full .btn{margin-top:24px}
 .ticks{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
@@ -328,7 +333,7 @@ a:hover .more svg,.more:hover svg{transform:translateX(3px)}
   .sec,.ontime,.member,.close{padding:64px 0}
   .head{padding-top:44px}
   .head:not(:has(.head__media)){padding-bottom:48px}
-  .head__media{margin-top:36px}
+  .head--split .head__grid{grid-template-columns:1fr;gap:36px}
   .head__img{aspect-ratio:4/3}
   .head+.sec{padding-top:64px}
   .hero__media{height:auto;min-height:0}
@@ -373,3 +378,16 @@ span.zoom{display:block;position:relative;isolation:isolate}
   .hero__media:has(.hero__vid)::before{display:none}
   .hero__pause{top:12px;right:12px}
 }
+
+/* gold plan cards: navy ink on gold (AA), one solid navy Choose button on every card */
+.plan .ticks--light li{color:var(--black);font-weight:500}
+.plan .ticks--light svg{color:var(--black)}
+.plan .fine--light{color:#1B2A6B}
+.plan .btn--book,.plan .btn--light{background:var(--black);color:#fff}
+.plan .btn--book:hover,.plan .btn--light:hover{background:#06124A;color:#fff}
+.member .plans+.fine--light{color:#DCE3FA}
+/* contact: heading on top, then two even cards starting on the same line */
+#request .h2{margin-bottom:36px}
+.split--cards{align-items:stretch;gap:32px}
+.split--cards .card,.split--cards .visit__card{background:var(--gray);border-radius:var(--r);padding:34px}
+.split--cards .visit__card .btn--soft{background:#fff}
