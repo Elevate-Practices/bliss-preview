@@ -403,3 +403,7 @@ span.zoom{display:block;position:relative;isolation:isolate}
 .split--cards{align-items:stretch;gap:32px}
 .split--cards .card,.split--cards .visit__card{background:var(--gray);border-radius:var(--r);padding:34px}
 .split--cards .visit__card .btn--soft{background:#fff}
+
+/* hover pill on mega-menu links, Gunnell-style (Chris, Oct 19 2026) */
+.mega li a{padding:7px 10px;margin-inline:-10px;border-radius:8px;transition:background .15s,color .15s}
+.mega li a:hover,.mega li a[aria-current]{background:#E9EDFB;color:var(--blue);text-decoration:none;opacity:1}
