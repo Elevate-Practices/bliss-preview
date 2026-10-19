@@ -1,16 +1,6 @@
-// Bliss Modern Dentistry: services menu + mobile menu
+// Bliss Modern Dentistry: mobile menu (the Services mega-menu is CSS-only: hover / focus-within)
 (function () {
   document.documentElement.classList.add('js');
-  var btn = document.querySelector('.nav__btn'), mega = document.getElementById('mega');
-  if (btn && mega) {
-    var item = btn.parentElement, t;
-    function set(o) { btn.setAttribute('aria-expanded', o); mega.classList.toggle('is-open', o); }
-    btn.addEventListener('click', function () { set(btn.getAttribute('aria-expanded') !== 'true'); });
-    item.addEventListener('mouseenter', function () { clearTimeout(t); if (matchMedia('(hover:hover)').matches) set(true); });
-    item.addEventListener('mouseleave', function () { t = setTimeout(function () { set(false); }, 180); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
-    document.addEventListener('click', function (e) { if (!item.contains(e.target)) set(false); });
-  }
   var burger = document.querySelector('.burger'), mnav = document.getElementById('mnav');
   if (burger && mnav) {
     var open = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>';
